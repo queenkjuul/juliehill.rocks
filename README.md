@@ -2,6 +2,8 @@
 
 ## Personal portfolio website of Julie Hill
 
+[_See it live at https://juliehill.rocks_](https://juliehill.rocks)
+
 ![cloudflare pages status badge](https://img.shields.io/endpoint?url=https://cloudflare-pages-badges.qkj49.workers.dev/?projectName=juliehill)
 
 ![playwright status badge](https://github.com/queenkjuul/juliehill.rocks/actions/workflows/playwright.yml/badge.svg)
