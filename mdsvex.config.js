@@ -9,6 +9,9 @@ const config = defineConfig({
 
   remarkPlugins: [],
   rehypePlugins: [],
+  layout: {
+    _: './src/lib/layout/MdPageLayout.svelte',
+  },
 })
 
 export default config
