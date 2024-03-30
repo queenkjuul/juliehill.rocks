@@ -1,12 +1,15 @@
-import _pfp from '$assets/pfp.png'
-import { config } from '$src/site.config'
 import type { ComponentType } from 'svelte'
-import { derived, readable, writable } from 'svelte/store'
+import type { HTMLImgAttributes } from 'svelte/elements'
+
+export const DATA_KEY = Symbol.for('appData')
+export const DRAWER_KEY = Symbol.for('drawer')
+export const PAGELINKS_KEY = Symbol.for('pagelinks')
 
 export interface Person {
   firstName: string
   lastName: string
-  occupation: string
+  occupation?: string
+  location?: string
   languages?: Languages
 }
 
@@ -21,22 +24,32 @@ export interface SocialLink {
   component: ComponentType
 }
 
+export interface Page {
+  metadata: Partial<{ title: string }>
+  path?: string
+  // unsure of MDsveX component type
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  component: any
+}
+
+export interface PageLink {
+  label: string
+  filename: string
+}
+
 export type Socials = Array<SocialLink>
 export type Languages = Array<Language>
+export type Pages = Array<Page>
 
-export type SiteConfig = {
+export type UserConfig = {
   person: Person
   socials: Socials
 }
 
-const _person = writable<Person>()
-const _socials = writable<Socials>()
-
-export const pfp = readable(_pfp)
-export const person = derived(_person, ($person) => $person)
-export const socials = derived(_socials, ($socials) => $socials)
-
-export function setup() {
-  _person.set(config.person)
-  _socials.set(config.socials)
+export type AppData = {
+  person: Person
+  socials: Socials
+  languageImages: HTMLImgAttributes[]
+  pfp: string
+  pages: Pages
 }

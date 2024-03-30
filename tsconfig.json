@@ -10,7 +10,8 @@
     "strict": true,
     "module": "ESNext",
     "target": "ESNext",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "esModuleInterop": true
   }
   // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
   // except $lib which is handled by https://kit.svelte.dev/docs/configuration#files

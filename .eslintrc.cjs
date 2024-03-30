@@ -29,9 +29,6 @@ module.exports = {
     },
   ],
   rules: {
-    '@html-eslint/require-closing-tags': [
-      'warn',
-      { selfClosing: 'always', allowSelfClosingCustom: 'true' },
-    ],
+    '@typescript-eslint/no-explicit-any': 'warn',
   },
 }
