@@ -14,6 +14,9 @@ const config = {
 
   theme: {
     extend: {
+      screens: {
+        xs: { max: '420px' },
+      },
       colors: {
         // flowbite-svelte
         primary: {
