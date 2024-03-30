@@ -15,8 +15,8 @@
   $: hideAvatar = $page.url.pathname == '/'
 </script>
 
-<Navbar rounded color="form" class="mb-4 mt-2 py-1.5 md:mt-0">
-  <div class="navbar-title-section flex flex-row justify-center gap-4">
+<Navbar rounded color="form" class="mb-4 mt-2 bg-gray-300 py-1.5 md:mt-0">
+  <div class="navbar-title-section flex flex-row items-center justify-center gap-4">
     <NavHamburger
       class="md:block lg:block"
       onClick={() => {
@@ -24,8 +24,10 @@
       }}
     />
     <NavBrand
-      ><Avatar src={pfp} class={`mr-4 ${hideAvatar ? 'hidden' : ''}`} />{firstName}
-      {lastName}</NavBrand
+      href="/"
+      class="font-header jutify-center align-center mt-[3px] text-3xl text-primary-400 dark:text-primary-300"
+      ><Avatar src={pfp} class={`mr-4 ${hideAvatar ? 'hidden' : ''}`} />
+      <div>{firstName} {lastName}</div></NavBrand
     >
   </div>
   <div class="navbar-buttons-section xs:hidden">
