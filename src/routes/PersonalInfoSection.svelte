@@ -31,10 +31,14 @@
     alt={`${firstName} ${lastName}'s Profile Picture'`}
   />
   <div class="flex w-full flex-col items-center justify-center gap-2">
-    <Heading tag="h1" class="text-center md:text-left">{firstName} {lastName}</Heading>
-    <Heading tag="h2" class="text-center md:text-left">{occupation}</Heading>
+    <Heading
+      tag="h1"
+      class="text-center text-primary-400 dark:text-primary-400 md:ml-8 md:text-left"
+      >{firstName} {lastName}</Heading
+    >
+    <Heading tag="h2" class="text-center md:ml-8 md:text-left">{occupation}</Heading>
     {#if location}
-      <Heading tag="h6" class="text-center italic md:text-left">{location}</Heading>
+      <Heading tag="h6" class="text-center md:ml-8 md:text-left">{location}</Heading>
     {/if}
     <About />
   </div>

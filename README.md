@@ -51,3 +51,9 @@ Layout and styling need to be improved still.
 I knew I wanted to use Svelte, so I started looking for a component library that was aesthetically pleasing to me and looked like it included all of the components I expected to use. I found several suitable ones, and considered Bootstrap, but Flowbite won me over thanks to the Tailwind underpinnings, which is another tool I'm not sure how I'd live without.
 
 The goal is to demonstrate thoroughly modern, high quality, well-documented, and reusable code.
+
+### Customization
+
+First off, go into `tailwind.config.cjs` and comment out my colors and uncomment the one you want instead
+
+Then go into `src/user.config.ts` and set the values to what you want. Language `deviconKey` should be a string which will map to a [Devicon](https://devicon.dev) SVG file with the filename pattern `{deviconKey}-original.svg`. Icon components for socials must be imported from the `flowbite-svelte-icons` package, which you can browse online [here](https://flowbite-svelte-icons.codewithshin.com/solid)
