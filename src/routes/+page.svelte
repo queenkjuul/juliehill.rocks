@@ -1,7 +1,7 @@
 <script>
   import { person, pfp } from '$lib'
   import { Heading, Img } from 'flowbite-svelte'
-  // @ts-ignore
+  // @ts-expect-error fixed-in-other-branch
   import About from '../lib/content/about.md'
   const { firstName, lastName, occupation } = $person
 </script>
