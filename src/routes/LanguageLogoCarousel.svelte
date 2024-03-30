@@ -13,7 +13,7 @@
   <div class="w-full">
     {#key label}
       <div
-        class="h-10 w-full rounded p-2 text-center text-lg font-extrabold dark:text-gray-300"
+        class="h-10 w-full rounded p-2 text-center text-lg font-extrabold dark:text-gray-300 lg:text-2xl"
         in:fade
       >
         <span>{label}</span>
