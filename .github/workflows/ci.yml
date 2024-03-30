@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Setup Node using nvm
-      uses: dcodeIO/setup-node-nvm@v5
+      uses: irby/setup-node-nvm@v1.0.0
     - run: npm ci
     - run: npm run lint
     - run: npm run check
