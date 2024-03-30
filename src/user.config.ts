@@ -1,11 +1,12 @@
 import { GithubSolid, LinkedinSolid, YoutubeSolid } from 'flowbite-svelte-icons'
-import type { SiteConfig } from './lib/util/config'
+import type { UserConfig } from './lib/util/config'
 
-export const config: SiteConfig = {
+export const userConfig: UserConfig = {
   person: {
     firstName: 'Julie',
     lastName: 'Hill',
     occupation: 'Frontend Engineer',
+    location: 'Chicago, IL',
     languages: [
       {
         displayName: 'TypeScript',
@@ -22,6 +23,14 @@ export const config: SiteConfig = {
       {
         displayName: 'Angular',
         deviconKey: 'angular',
+      },
+      {
+        displayName: 'Java',
+        deviconKey: 'java',
+      },
+      {
+        displayName: 'Multimedia Production',
+        deviconKey: 'premierepro',
       },
     ],
   },

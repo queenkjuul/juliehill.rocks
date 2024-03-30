@@ -17,3 +17,9 @@
 - Prettier
 - ESLint
 - TypeScript
+
+### Features
+
+- Customizable and extensible
+- Highlight skills with language logos on front page
+- Add content via Markdown
