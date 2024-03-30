@@ -6,6 +6,24 @@ export const config: SiteConfig = {
     firstName: 'Julie',
     lastName: 'Hill',
     occupation: 'Frontend Engineer',
+    languages: [
+      {
+        displayName: 'TypeScript',
+        deviconKey: 'typescript',
+      },
+      {
+        displayName: 'Svelte+SvelteKit',
+        deviconKey: 'svelte',
+      },
+      {
+        displayName: 'React',
+        deviconKey: 'react',
+      },
+      {
+        displayName: 'Angular',
+        deviconKey: 'angular',
+      },
+    ],
   },
   socials: [
     {

@@ -21,6 +21,7 @@ const config = {
       $test: 'tests',
       $assets: 'src/lib/assets',
       $util: 'src/lib/util',
+      $content: 'src/lib/content',
     },
   },
 }

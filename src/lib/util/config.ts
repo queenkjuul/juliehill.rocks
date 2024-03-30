@@ -7,6 +7,12 @@ export interface Person {
   firstName: string
   lastName: string
   occupation: string
+  languages?: Languages
+}
+
+export interface Language {
+  displayName: string
+  deviconKey: string
 }
 
 export interface SocialLink {
@@ -16,6 +22,7 @@ export interface SocialLink {
 }
 
 export type Socials = Array<SocialLink>
+export type Languages = Array<Language>
 
 export type SiteConfig = {
   person: Person
