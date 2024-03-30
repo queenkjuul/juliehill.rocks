@@ -8,14 +8,14 @@
 </script>
 
 <Navbar rounded color="form" class="mb-4 py-1.5">
-  <div class="navbar-title-section flex flex-row gap-4">
+  <div class="navbar-title-section flex flex-row justify-center gap-4">
     <NavHamburger class="md:block lg:block" />
     <NavBrand><Avatar src={pfp} class="mr-4" />{firstName} {lastName}</NavBrand>
   </div>
   <div class="navbar-buttons-section">
     <Toolbar>
       {#each $socials as social}
-        <ToolbarSocialLink {social} />
+        <ToolbarSocialLink {social} class="xs:hidden" />
       {/each}
       <DarkMode />
     </Toolbar>

@@ -7,6 +7,6 @@
   const { name, href, component } = social
 </script>
 
-<ToolbarLink {name} {href}>
+<ToolbarLink {name} {href} {...$$restProps}>
   <svelte:component this={component} />
 </ToolbarLink>
