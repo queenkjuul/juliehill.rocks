@@ -17,7 +17,7 @@
   <title>{firstName} {lastName} - {title}</title>
 </svelte:head>
 
-<Breadcrumb class="mb-4">
+<Breadcrumb class="mb-4 ml-4">
   <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
   <BreadcrumbItem href={`/${title}`}>{title}</BreadcrumbItem>
 </Breadcrumb>

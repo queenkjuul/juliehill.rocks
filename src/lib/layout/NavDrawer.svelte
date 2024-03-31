@@ -55,7 +55,7 @@
           activeClass="dark:bg-primary-300 bg-primary-800 text-gray-800 dark:text-gray-300"
         />
         {#each $pageLinks as { label, filename }}
-          <SidebarItem {label} href={`/${filename}`} on:click={closeDrawer} />
+          <SidebarItem {label} href={`/pages/${filename}`} on:click={closeDrawer} />
         {/each}
       </SidebarGroup>
       <div class="grow" />
