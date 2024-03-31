@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-  <title>{firstName} {lastName} - {metadata.title}</title>
+  <title>{firstName} {lastName} - {title}</title>
 </svelte:head>
 
 <Breadcrumb class="mb-4">

@@ -11,6 +11,7 @@ export interface Person {
   occupation?: string
   location?: string
   languages?: Languages
+  email?: string
 }
 
 export interface Language {
