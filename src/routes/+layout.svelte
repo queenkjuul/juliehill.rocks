@@ -10,6 +10,7 @@
   import Footer from '$src/lib/layout/Footer.svelte'
   import Header from '$src/lib/layout/Header.svelte'
   import NavDrawer from '$src/lib/layout/NavDrawer.svelte'
+  import Title from '$src/lib/layout/Title.svelte'
   import { setContext } from 'svelte'
   import { readable, writable } from 'svelte/store'
   import { fade } from 'svelte/transition'
@@ -19,7 +20,7 @@
   export let data: PageData
 
   const { pages, person } = data
-  const { firstName, lastName, occupation } = person
+  const { occupation } = person
 
   const drawerHidden = writable<boolean>(true)
   setContext(DRAWER_KEY, drawerHidden)
@@ -30,9 +31,7 @@
   $: setContext<AppData>(DATA_KEY, data)
 </script>
 
-<svelte:head>
-  <title>{firstName} {lastName} - {occupation}</title>
-</svelte:head>
+<Title title={occupation} />
 
 <NavDrawer />
 

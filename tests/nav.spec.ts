@@ -16,5 +16,5 @@ test('navigates to other pages', async ({ page }) => {
   await page.getByLabel(navButtonLabel).click()
   await expect(page.getByText('About This Site')).toBeVisible()
   await page.getByText('About This Site').click()
-  await page.waitForURL('/siteinfo')
+  await page.waitForURL('/pages/siteinfo')
 })

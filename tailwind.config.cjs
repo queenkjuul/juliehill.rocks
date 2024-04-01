@@ -21,6 +21,7 @@ const config = {
     extend: {
       screens: {
         xs: { max: '450px' },
+        print: { raw: 'print' },
       },
       colors: {
         // custom

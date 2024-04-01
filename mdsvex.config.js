@@ -10,7 +10,7 @@ const config = defineConfig({
   remarkPlugins: [],
   rehypePlugins: [],
   layout: {
-    _: './src/lib/layout/MdPageLayout.svelte',
+    _: './src/lib/util/md-wrappers/MdPageLayout.svelte',
   },
 })
 

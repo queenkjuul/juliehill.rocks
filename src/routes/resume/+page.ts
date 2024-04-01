@@ -1,7 +1,7 @@
-export async function load({ params }) {
+export async function load() {
   let mdPage
   try {
-    mdPage = await import(`../../lib/content/pages/${params.page}.md`)
+    mdPage = await import(`../../lib/content/resume.md`)
   } catch (e) {
     console.error(e)
   }

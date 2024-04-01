@@ -7,6 +7,7 @@ export const userConfig: UserConfig = {
     lastName: 'Hill',
     occupation: 'Frontend Engineer',
     location: 'Chicago, IL',
+    email: 'julie@juliehill.rocks',
     languages: [
       {
         displayName: 'TypeScript',

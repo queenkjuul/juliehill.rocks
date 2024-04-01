@@ -11,7 +11,7 @@
   } from 'flowbite-svelte'
   import { getContext } from 'svelte'
   import { sineIn } from 'svelte/easing'
-  import { DATA_KEY, DRAWER_KEY, PAGELINKS_KEY } from '..'
+  import { DATA_KEY, DRAWER_KEY, PAGELINKS_KEY, RESUME_LABEL } from '..'
   import ToolbarSocialLink from '../toolbar/ToolbarSocialLink.svelte'
 
   const drawerHidden = getContext(DRAWER_KEY)
@@ -54,8 +54,14 @@
           on:click={closeDrawer}
           activeClass="dark:bg-primary-300 bg-primary-800 text-gray-800 dark:text-gray-300"
         />
+        <SidebarItem
+          label={RESUME_LABEL}
+          href="/resume"
+          on:click={closeDrawer}
+          activeClass="dark:bg-primary-300 bg-primary-800 text-gray-800 dark:text-gray-300"
+        />
         {#each $pageLinks as { label, filename }}
-          <SidebarItem {label} href={`/${filename}`} on:click={closeDrawer} />
+          <SidebarItem {label} href={`/pages/${filename}`} on:click={closeDrawer} />
         {/each}
       </SidebarGroup>
       <div class="grow" />

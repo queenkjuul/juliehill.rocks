@@ -11,6 +11,7 @@ export interface Person {
   occupation?: string
   location?: string
   languages?: Languages
+  email?: string
 }
 
 export interface Language {
@@ -51,5 +52,6 @@ export type AppData = {
   socials: Socials
   languageImages: HTMLImgAttributes[]
   pfp: string
+  pdf: string
   pages: Pages
 }
