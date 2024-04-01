@@ -10,8 +10,7 @@ const config = defineConfig({
   remarkPlugins: [],
   rehypePlugins: [],
   layout: {
-    _: './src/routes/pages/[page]/MdPageLayout.svelte',
-    resume: './src/routes/resume/MdResumeLayout.svelte',
+    _: './src/lib/util/md-wrappers/MdPageLayout.svelte',
   },
 })
 

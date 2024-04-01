@@ -52,5 +52,6 @@ export type AppData = {
   socials: Socials
   languageImages: HTMLImgAttributes[]
   pfp: string
+  pdf: string
   pages: Pages
 }

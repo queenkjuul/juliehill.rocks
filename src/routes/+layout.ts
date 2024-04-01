@@ -1,4 +1,5 @@
 import pfp from '$assets/pfp.png'
+import pdf from '$assets/resume.pdf'
 import { loadMarkdownPages, type AppData, type Language } from '$src/lib'
 import { getDeviconAttributes } from '$src/lib/util/devicons'
 import { userConfig } from '$src/user.config'
@@ -19,6 +20,7 @@ export const load: LayoutLoad = async () => {
     languageImages: userConfig?.person?.languages?.map(getDeviconAttributes) ?? [],
     socials: userConfig?.socials ?? [],
     pfp,
+    pdf,
     pages: await loadMarkdownPages(),
   }
   return appData

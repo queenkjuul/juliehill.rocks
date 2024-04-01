@@ -1,6 +1,6 @@
 ---
-# failing to auto-detect by route, so specify:
-layout: resume
+blurb: 'Web Frontend Engineer with an eye for detail and proven experience across a range of technologies at enterprises big and small. Dedicated to quality code and polished experiences for users and developers alike'
+
 featuredLanguages:
   - Svelte
   - TypeScript

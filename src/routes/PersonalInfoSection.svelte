@@ -1,5 +1,6 @@
 <script>
   import About from '$lib/content/about.md'
+  import ContentWrapper from '$src/lib/layout/ContentWrapper.svelte'
   import { Heading, Img } from 'flowbite-svelte'
   import { getContext } from 'svelte'
   import { DATA_KEY } from '../lib'
@@ -9,17 +10,13 @@
   const { firstName, lastName, occupation, location } = person
 </script>
 
-<div
+<ContentWrapper
   class="
     flex w-full
     flex-col
     items-center
     justify-center
     gap-4
-    rounded-lg
-    bg-white
-    p-4
-    dark:bg-gray-800
     md:flex-row
     md:items-start
     md:p-8"
@@ -42,4 +39,4 @@
     {/if}
     <About />
   </div>
-</div>
+</ContentWrapper>

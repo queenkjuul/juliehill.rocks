@@ -1,57 +1,68 @@
 <script>
-  import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte'
+  import Breadcrumbs from '$lib/layout/Breadcrumbs.svelte'
+  import Title from '$lib/layout/Title.svelte'
+  import { RESUME_LABEL } from '$src/lib'
+  import { wrapperClass } from '$src/lib/layout/ContentWrapper.svelte'
+  import { Tooltip } from 'flowbite-svelte'
+  import { DownloadSolid, PrinterSolid } from 'flowbite-svelte-icons'
+  import FeaturedLanguages from './FeaturedLanguages.svelte'
+  import PersonalInfoCard from './PersonalInfoCard.svelte'
+  import Skills from './Skills.svelte'
 
   export let data
 
-  const { mdPage, person } = data
-  const { component, metadata } = mdPage
-  const { firstName, lastName } = person
+  const title = RESUME_LABEL
 
-  $: console.log(metadata)
+  const { mdPage, pdf } = data
+  const { component, metadata } = mdPage
+  const { blurb, featuredLanguages, skills } = metadata
 </script>
 
-<svelte:head
-  ><title>
-    {firstName}
-    {lastName} - Résumé
-  </title>
-</svelte:head>
+<Title {title} />
 
-<Breadcrumb class="mb-4 ml-4">
-  <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
-  <BreadcrumbItem href={`/resume`}>Résumé</BreadcrumbItem>
-</Breadcrumb>
-
-<div class="mb-4 flex flex-row items-center justify-around">
-  {#each metadata.featuredLanguages as language}
-    <div class="flex flex-col">
-      <div class="flex items-center justify-center">
-        <i class={`devicon-${language.toLowerCase()}-plain text-5xl`} />
-      </div>
-      <div class="mt-2 text-center text-lg font-bold">{language}</div>
-    </div>
-  {/each}
+<div class="flex flex-row justify-between print:hidden">
+  <Breadcrumbs href="resume" {title} />
+  <div class="grow" />
+  <button
+    on:click={() => window.print()}
+    class="mr-8 mt-0.5 flex flex-col text-sm text-gray-700 dark:text-gray-400"
+    ><PrinterSolid /></button
+  >
+  <Tooltip>Print Page</Tooltip>
+  <a href={pdf} class={`${pdf ? '' : 'hidden'} mr-2 text-sm text-gray-700 dark:text-gray-400`}
+    ><DownloadSolid /></a
+  >
+  <Tooltip>Download PDF {RESUME_LABEL}</Tooltip>
 </div>
 
-<div class="mb-4 flex flex-row flex-wrap items-center justify-center gap-2">
-  {#each metadata.skills as skill}
-    <div class="mx-1 text-sm">{skill}</div>
-  {/each}
-</div>
+<div class="flex flex-col gap-4 md:flex-row">
+  <div class="flex flex-col items-center justify-center md:justify-start">
+    <PersonalInfoCard {blurb} />
 
-<div class="resume rounded-lg bg-gray-50 p-4 dark:bg-gray-800 lg:p-8">
-  <svelte:component this={component} />
+    <FeaturedLanguages {featuredLanguages} />
+
+    <Skills {skills} />
+  </div>
+
+  <div class={`resume ${wrapperClass}`}>
+    <svelte:component this={component} />
+  </div>
 </div>
 
 <style lang="postcss">
   /* since mdsvex is handling the markdown "component" rendering,
-    we have no choice but to use some global styles */
+    we have no choice but to use some global styles, but with the 
+    .resume prefix, they will not be applied outside this component */
   .resume :global(hr) {
     @apply mb-4 mt-0 h-1 bg-primary-400;
   }
 
+  .resume :global(h1) {
+    @apply text-4xl;
+  }
+
   .resume :global(h2) {
-    @apply mt-4;
+    @apply mt-4 text-3xl;
   }
 
   .resume :global(h3) {
