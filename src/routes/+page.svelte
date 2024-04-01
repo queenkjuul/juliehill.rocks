@@ -3,5 +3,7 @@
   import PersonalInfoSection from '$src/routes/PersonalInfoSection.svelte'
 </script>
 
-<PersonalInfoSection />
-<LanguageLogoCarousel />
+<div class="md:mx-auto md:w-2/3">
+  <PersonalInfoSection />
+  <LanguageLogoCarousel />
+</div>

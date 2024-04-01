@@ -13,6 +13,6 @@
 
 <Breadcrumbs {title} />
 
-<ContentWrapper class="flex flex-col gap-4">
+<ContentWrapper class="flex flex-col gap-4 md:mx-auto md:w-2/3">
   <svelte:component this={component} />
 </ContentWrapper>
