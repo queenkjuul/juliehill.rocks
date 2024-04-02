@@ -21,7 +21,7 @@ export const GET: RequestHandler = async ({ params }) => {
       pinnedResponse?.map((pinned) => {
         return {
           ...pinned,
-          languages: pinned.languages.map((lang) => lang.name),
+          languages: pinned?.languages?.map?.((lang) => lang.name),
         }
       }) ?? []
   } catch (e) {
