@@ -1,9 +1,7 @@
-import { env } from '$env/dynamic/private'
+import { GITHUB_API_TOKEN } from '$env/static/private'
 
 export const ghAuth = {
   headers: {
-    authorization: `token ${env.GITHUB_API_TOKEN}`,
+    authorization: `token ${GITHUB_API_TOKEN}`,
   },
 }
-
-export const ghToken = env.GITHUB_API_TOKEN

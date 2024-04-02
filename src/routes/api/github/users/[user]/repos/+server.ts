@@ -1,4 +1,4 @@
-import { env } from '$env/dynamic/private'
+import { GITHUB_API_TOKEN } from '$env/static/private'
 import { ghAuth } from '$src/lib/server'
 import type { RepoCardData } from '$src/routes/code/RepoInfoCard.svelte'
 import { request } from '@octokit/request'
@@ -14,7 +14,7 @@ export const GET: RequestHandler = async ({ params }) => {
   try {
     const repoResponse = await request(
       `GET /users/${params.user}/repos`,
-      env.GITHUB_API_TOKEN ? ghAuth : {}
+      GITHUB_API_TOKEN ? ghAuth : {}
     )
     const rawRepos: Array<GithubRepo> = await repoResponse.data
     repos = rawRepos
@@ -36,5 +36,5 @@ export const GET: RequestHandler = async ({ params }) => {
     error(500)
   }
 
-  return json({ repos })
+  return json({ repos, auth: !!GITHUB_API_TOKEN })
 }

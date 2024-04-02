@@ -8,12 +8,13 @@
 
   export let data
 
-  const { repos, pinned } = data
+  const { repos, pinned, ghAuth } = data
   const breakpoints = [768, 1140] // tailwindcss.config.cjs import doesn't work, but those bp's dont work perfectly here either
   const component = RepoInfoCard
   const gap = 'gap-4'
   const title = 'Code'
 
+  $: console.log(ghAuth)
   $: pinnedNames = pinned?.map?.(({ name }) => name) ?? []
   $: ghRepoCardData = repos?.filter((repo: RepoCardData) => !pinnedNames.includes(repo.name))
 </script>

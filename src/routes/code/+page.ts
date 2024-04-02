@@ -12,6 +12,7 @@ export const load: PageLoad = async ({ fetch, parent }) => {
   const ghRepoResponse = await fetch(`/api/github/users/${github}/repos`)
   const ghRepoObject = await ghRepoResponse.json()
   const ghRepos = await ghRepoObject.repos
+  const ghAuth = await ghRepoObject.auth
 
   const pinnedResponse = await fetch(`/api/github/users/${github}/pinned`)
   const pinned = await pinnedResponse.json()
@@ -29,5 +30,6 @@ export const load: PageLoad = async ({ fetch, parent }) => {
   return {
     repos: ghRepos,
     pinned,
+    ghAuth,
   }
 }
