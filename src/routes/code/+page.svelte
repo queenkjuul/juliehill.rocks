@@ -14,7 +14,7 @@
   const gap = 'gap-4'
   const title = 'Code'
 
-  $: pinnedNames = pinned.map(({ name }) => name)
+  $: pinnedNames = pinned?.map?.(({ name }) => name) ?? []
   $: ghRepoCardData = repos?.filter((repo: RepoCardData) => !pinnedNames.includes(repo.name))
 </script>
 
