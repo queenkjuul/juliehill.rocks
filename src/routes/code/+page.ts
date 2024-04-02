@@ -1,7 +1,7 @@
 import { goto } from '$app/navigation'
 import type { PageLoad } from './$types'
 
-export const load: PageLoad = async ({ fetch, data, parent }) => {
+export const load: PageLoad = async ({ fetch, parent }) => {
   const parentData = await parent()
   const { github } = parentData.person
   // can't proceed without a username

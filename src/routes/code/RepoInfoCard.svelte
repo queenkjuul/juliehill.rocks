@@ -3,6 +3,8 @@
     name: string
     url: string
     description: string
+    // eslint fails to find global.d.ts types, unsure why
+    // eslint-disable-next-line no-undef
     primaryLanguage: Partial<ILanguage>
     languages?: Array<string>
     stargazerCount: number

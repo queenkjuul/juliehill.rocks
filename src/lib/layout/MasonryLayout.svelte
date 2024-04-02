@@ -5,6 +5,8 @@
   // so screw it, we'll do it live
   import type { ComponentType } from 'svelte'
 
+  // eslint not properly picking up svelte generic
+  // eslint-disable-next-line no-undef
   type T = $$Generic
   export let items: Array<T> = []
   export let breakpoints: Array<number> = [768, 1024]
@@ -26,7 +28,6 @@
     })
 
     const mod = columns.length
-    console.log(mod)
     for (let i = 0; i < mod; i++) {
       columns[i] = items.filter((item, index) => index % mod === i)
     }

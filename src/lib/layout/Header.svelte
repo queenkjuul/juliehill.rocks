@@ -40,7 +40,7 @@
     />
     <NavBrand
       href="/"
-      class="jutify-center align-center font-header mt-[3px] text-3xl text-primary-400 dark:text-primary-300"
+      class="jutify-center align-center mt-[3px] font-header text-3xl text-primary-400 dark:text-primary-300"
       ><Avatar src={pfp} class={`mr-4 ${hideAvatar ? 'hidden lg:block' : ''}`} />
       <div>{firstName} {lastName}</div></NavBrand
     >

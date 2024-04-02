@@ -1,10 +1,7 @@
 import { env } from '$env/dynamic/private'
 import { ghAuth } from '$src/lib/server'
 import { request } from '@octokit/request'
-import type { Endpoints } from '@octokit/types'
 import { error, json, type RequestHandler } from '@sveltejs/kit'
-
-type GithubLanguages = Endpoints['GET /repos/{owner}/{repo}/languages']['response']['data']
 
 export const GET: RequestHandler = async ({ params }) => {
   const { user, repo } = params
