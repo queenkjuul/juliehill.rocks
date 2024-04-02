@@ -22,7 +22,7 @@
   let langElem: HTMLElement
 
   const { url, name, stargazerCount, description, primaryLanguage, languages } = item
-  const languageColor = Color(primaryLanguage?.color)
+  const languageColor = Color(primaryLanguage.color)
   let adjustedLanguageColor
   let langElemBgColor: string
   $: if (langElem) {

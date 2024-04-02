@@ -4,14 +4,13 @@ import { Client } from 'get-pinned-repos'
 import { error, json, type RequestHandler } from '@sveltejs/kit'
 
 export const GET: RequestHandler = async ({ params }) => {
-  let pinned: Array<Partial<IPinnedRepo>> = []
+  let pinned: Array<IPinnedRepo> = []
 
   // we can access public repo data without auth, but request limits are quite low
   // so we only make extra calls for language data if we have a token
   // (also get-pinned-repos might not work at all without one)
   if (!env.GITHUB_API_TOKEN) {
     console.error('No github token!')
-    pinned[0] = { name: JSON.stringify(env) }
     return json(pinned)
   }
 
@@ -27,7 +26,7 @@ export const GET: RequestHandler = async ({ params }) => {
       }) ?? []
   } catch (e) {
     console.error(e)
-    error(500, JSON.stringify(e))
+    error(500)
   }
 
   return json(pinned)
