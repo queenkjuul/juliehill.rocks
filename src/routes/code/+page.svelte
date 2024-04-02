@@ -1,5 +1,7 @@
 <script lang="ts">
+  import Breadcrumbs from '$src/lib/layout/Breadcrumbs.svelte'
   import MasonryLayout from '$src/lib/layout/MasonryLayout.svelte'
+  import Title from '$src/lib/layout/Title.svelte'
   import { Heading, Hr } from 'flowbite-svelte'
   import type { RepoCardData } from './RepoInfoCard.svelte'
   import RepoInfoCard from './RepoInfoCard.svelte'
@@ -10,10 +12,15 @@
   const breakpoints = [768, 1140] // tailwindcss.config.cjs import doesn't work, but those bp's dont work perfectly here either
   const component = RepoInfoCard
   const gap = 'gap-4'
+  const title = 'Code'
 
   $: pinnedNames = pinned.map(({ name }) => name)
   $: ghRepoCardData = repos?.filter((repo: RepoCardData) => !pinnedNames.includes(repo.name))
 </script>
+
+<Title {title} />
+
+<Breadcrumbs {title} />
 
 <!-- if no github token, we will only get public repos, not pinned rpos -->
 {#if pinned.length > 0}
