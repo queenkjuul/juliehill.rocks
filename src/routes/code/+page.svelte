@@ -22,6 +22,8 @@
 
 <Breadcrumbs {title} />
 
+{JSON.stringify(data.tonkason)}
+
 <!-- if no github token, we will only get public repos, not pinned rpos -->
 {#if pinned.length > 0}
   <Heading class="text-center">Featured Repos</Heading>

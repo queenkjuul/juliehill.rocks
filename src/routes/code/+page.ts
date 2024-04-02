@@ -26,8 +26,12 @@ export const load: PageLoad = async ({ fetch, parent }) => {
     }
   }
 
+  const tonkadonk = await fetch(`/api/github`)
+  const tonkason = await tonkadonk.json()
+
   return {
     repos: ghRepos,
     pinned,
+    tonkason,
   }
 }
