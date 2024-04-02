@@ -22,6 +22,7 @@ const config = {
       screens: {
         xs: { max: '450px' },
         print: { raw: 'print' },
+        xl: '1200px',
       },
       colors: {
         // custom

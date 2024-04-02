@@ -15,6 +15,7 @@ export const load: LayoutLoad = async () => {
       occupation: userConfig?.person?.occupation,
       languages: userConfig?.person?.languages ?? [defaultLanguage],
       location: userConfig?.person?.location,
+      github: userConfig?.person?.github ?? '',
       email: userConfig?.person?.email ?? '',
     },
     languageImages: userConfig?.person?.languages?.map(getDeviconAttributes) ?? [],

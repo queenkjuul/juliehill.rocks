@@ -60,6 +60,12 @@
           on:click={closeDrawer}
           activeClass="dark:bg-primary-300 bg-primary-800 text-gray-800 dark:text-gray-300"
         />
+        <SidebarItem
+          label="Code"
+          href="/code"
+          on:click={closeDrawer}
+          activeClass="dark:bg-primary-300 bg-primary-800 text-gray-800 dark:text-gray-300"
+        />
         {#each $pageLinks as { label, filename }}
           <SidebarItem {label} href={`/pages/${filename}`} on:click={closeDrawer} />
         {/each}

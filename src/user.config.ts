@@ -8,6 +8,7 @@ export const userConfig: UserConfig = {
     occupation: 'Frontend Engineer',
     location: 'Chicago, IL',
     email: 'julie@juliehill.rocks',
+    github: 'queenkjuul',
     languages: [
       {
         displayName: 'TypeScript',
