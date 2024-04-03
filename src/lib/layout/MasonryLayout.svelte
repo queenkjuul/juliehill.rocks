@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { fade } from 'svelte/transition'
+
   // hours turned to days as every third-party masonry layout
   // library from across the land was tried, and one by one each
   // failed to work correctly (even Flowbite Gallery)
@@ -36,7 +38,11 @@
 
 {#key columns}
   {#if items && columns && items.length > 0}
-    <div class={`flex flex-row justify-center ${divClass} ${gap}`} bind:clientWidth={currentWidth}>
+    <div
+      class={`flex flex-row justify-center ${divClass} ${gap}`}
+      bind:clientWidth={currentWidth}
+      transition:fade
+    >
       {#each columns as column}
         <div class={`flex flex-col justify-start ${gap}`}>
           {#each column as item}
