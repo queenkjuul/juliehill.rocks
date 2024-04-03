@@ -15,6 +15,7 @@
   import { Spinner } from 'flowbite-svelte'
   import { setContext } from 'svelte'
   import { readable, writable } from 'svelte/store'
+  import { fade } from 'svelte/transition'
   import '../app.pcss'
   import type { PageData } from './$types.js'
   import Skel from './code/skel.svelte'
@@ -45,9 +46,9 @@
       <Spinner class="absolute top-1/2 my-auto" size={32} />
     </div>
   {:else}
-    <main>
+    <main in:fade>
       <slot />
     </main>
+    <Footer />
   {/if}
-  <Footer />
 </div>

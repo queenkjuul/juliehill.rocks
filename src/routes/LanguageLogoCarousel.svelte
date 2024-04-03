@@ -20,7 +20,7 @@
       </div>
     {/key}
     <Carousel
-      class="my-2 h-10"
+      class="max-h-50 my-2"
       imgClass="object-contain h-full w-fit rounded-sm"
       duration={3500}
       {images}
