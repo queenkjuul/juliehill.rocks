@@ -11,7 +11,7 @@
   >
   <Hr class="animate-pulse" />
   <div class="lg:max-w-2/3 m-4 grid h-[180px] grid-flow-row gap-4 md:grid-cols-2 lg:grid-cols-3">
-    {#each nums as num}
+    {#each nums as _i}
       <Skeleton class={style} />
     {/each}
   </div>
