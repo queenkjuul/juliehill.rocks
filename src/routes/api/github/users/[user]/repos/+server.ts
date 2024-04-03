@@ -36,5 +36,5 @@ export const GET: RequestHandler = async ({ params }) => {
     error(500)
   }
 
-  return json({ repos, auth: !!GITHUB_API_TOKEN })
+  return json({ repos })
 }
