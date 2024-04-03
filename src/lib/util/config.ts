@@ -12,6 +12,7 @@ export interface Person {
   location?: string
   languages?: Languages
   email?: string
+  github?: string
 }
 
 export interface Language {

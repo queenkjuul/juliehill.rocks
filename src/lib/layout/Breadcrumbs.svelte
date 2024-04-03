@@ -7,5 +7,5 @@
 
 <Breadcrumb class="mb-4 ml-4">
   <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
-  <BreadcrumbItem href={`/${href ?? title}`}>{title}</BreadcrumbItem>
+  <BreadcrumbItem href={`/${href ?? title.toLowerCase()}`}>{title}</BreadcrumbItem>
 </Breadcrumb>

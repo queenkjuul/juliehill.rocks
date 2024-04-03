@@ -10,7 +10,9 @@ on:
     branches: ['main']
 
 jobs:
-  build:
+  check:
+    env:
+      GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
 
     steps:
@@ -20,4 +22,3 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run check
-      - run: npm run build --if-present

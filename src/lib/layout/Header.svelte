@@ -26,34 +26,38 @@
   $: hideAvatar = hideAvatarPaths.includes($page.url.pathname)
 </script>
 
-<Navbar
-  rounded
-  color="form"
-  class={`mb-4 mt-2 py-1.5 shadow-md dark:border dark:border-gray-600 md:mt-0 ${hideAvatar ? 'print:hidden' : ''}`}
->
-  <div class="navbar-title-section flex flex-row items-center justify-center gap-4">
-    <NavHamburger
-      class="md:block lg:block"
-      onClick={() => {
-        $drawerHidden = false
-      }}
-    />
-    <NavBrand
-      href="/"
-      class="jutify-center align-center mt-[3px] font-header text-3xl text-primary-400 dark:text-primary-300"
-      ><Avatar src={pfp} class={`mr-4 ${hideAvatar ? 'hidden' : ''}`} />
-      <div>{firstName} {lastName}</div></NavBrand
-    >
-    <NavUl>
-      <NavLi href="/resume">{RESUME_LABEL}</NavLi>
-    </NavUl>
-  </div>
-  <div class="navbar-buttons-section xs:hidden">
-    <Toolbar>
-      {#each socials as social}
-        <ToolbarSocialLink {social} />
-      {/each}
-      <DarkMode />
-    </Toolbar>
-  </div>
-</Navbar>
+<div class="flex w-full flex-row items-center justify-center">
+  <Navbar
+    rounded
+    shadow
+    color="form"
+    class={`mb-4 mt-2 py-1.5 shadow-md dark:border dark:border-gray-600 md:mt-0 ${hideAvatar ? 'print:hidden' : ''}`}
+  >
+    <div class="navbar-title-section flex flex-row items-center justify-center gap-4">
+      <NavHamburger
+        class="md:block lg:block"
+        onClick={() => {
+          $drawerHidden = false
+        }}
+      />
+      <NavBrand
+        href="/"
+        class="jutify-center align-center mt-[3px] font-header text-3xl text-primary-400 dark:text-primary-300"
+        ><Avatar src={pfp} class={`mr-4 ${hideAvatar ? 'hidden lg:block' : ''}`} />
+        <div>{firstName} {lastName}</div></NavBrand
+      >
+      <NavUl>
+        <NavLi href="/resume">{RESUME_LABEL}</NavLi>
+        <NavLi href="/code">Code</NavLi>
+      </NavUl>
+    </div>
+    <div class="navbar-buttons-section xs:hidden">
+      <Toolbar>
+        {#each socials as social}
+          <ToolbarSocialLink {social} />
+        {/each}
+        <DarkMode />
+      </Toolbar>
+    </div>
+  </Navbar>
+</div>
