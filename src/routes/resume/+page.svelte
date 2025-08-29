@@ -29,8 +29,10 @@
     ><PrinterSolid /></button
   >
   <Tooltip>Print Page</Tooltip>
-  <a href={pdf} class={`${pdf ? '' : 'hidden'} mr-2 text-sm text-gray-700 dark:text-gray-400`}
-    ><DownloadSolid /></a
+  <a
+    href={pdf}
+    class={`${pdf ? '' : 'hidden'} mr-2 text-sm text-gray-700 dark:text-gray-400`}
+    download><DownloadSolid /></a
   >
   <Tooltip>Download PDF {RESUME_LABEL}</Tooltip>
 </div>
