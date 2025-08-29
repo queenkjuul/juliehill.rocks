@@ -10,12 +10,23 @@ type GithubRepo = Endpoints['GET /repos/{owner}/{repo}']['response']['data']
 
 export const GET: RequestHandler = async ({ params }) => {
   let repos: Array<RepoCardData> = []
+  let repoResponse
 
   try {
-    const repoResponse = await request(
-      `GET /users/${params.user}/repos`,
-      GITHUB_API_TOKEN ? ghAuth : {}
-    )
+    try {
+      repoResponse = await request(
+        `GET /users/${params.user}/repos`,
+        GITHUB_API_TOKEN ? ghAuth : {}
+      )
+    } catch (_e) {
+      // swallow error, we'll try again without auth
+      // we can still access public repo data without a token
+    }
+
+    if (!repoResponse) {
+      repoResponse = await request(`GET /users/${params.user}/repos`)
+    }
+
     const rawRepos: Array<GithubRepo> = await repoResponse.data
     repos = rawRepos
       .sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime())
