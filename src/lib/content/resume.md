@@ -3,26 +3,18 @@ blurb: 'Web Frontend Engineer with an eye for detail and proven experience acros
 
 featuredLanguages:
   - Svelte
+  - React
   - TypeScript
   - Java
 
 skills:
-  - React
   - Angular
   - Vue
   - Playwright
   - TailwindCSS
-  - Sass/SCSS
   - Node.js
-  - TurboRepo
   - Express
-  - Redux
-  - SQL
-  - JavaFX
-  - Spring
-  - Cypress
   - Docker
-  - Jenkins
   - Python
 ---
 
@@ -36,19 +28,16 @@ skills:
 
 #### July 2022 - Present
 
-- Using primarily Svelte and SvelteKit, built a suite of web
-  applications facilitating an end-to-end financial trading platform,
-  from account creation and management to real-time tracking
-  and trading of stocks, bonds, options, and crypto
-- Implemented integrations with third party applications, libraries,
-  and APIs, as well as white-labelling Tastytrade products for
-  consumption by other corporate brands and external partners
-- Participated in project planning, story writing, prioritization, and
-  ticket sizing meetings with project managers and senior staff
-- Wrote extensive unit and integration tests using Vitest and
-  Playwright, with validated code deployed via GitHub Actions
-- Delivered presentations and documentation on best practices
-  and new technologies
+- Using primarily Svelte and SvelteKit, built a suite of web applications facilitating an end-to-end financial
+  trading platform, from account creation and management to real-time tracking and trading of stocks,
+  bonds, options, and crypto
+- Implemented integrations with third party applications, libraries, and APIs, as well as white-labelling
+  Tastytrade products for consumption by other corporate brands and external partners
+- Participated in project planning, design reviews, and product discovery with cross-functional teams
+- Led development of major new features, making independent design and technical decisions while
+  guiding junior engineers to project goals
+- Delivered presentations on best practices and new technologies while working continuously to improve
+  developer experience through documentation, tooling, and integration pipelines
 
 ## Union Pacific
 
@@ -63,8 +52,7 @@ skills:
 - Worked with a team of developers to improve and maintain
   existing services as well as add new functionality to complex
   business applications hosted on private cloud resources
-- Built and deployed REST and JMS microservices using
-  Java+Spring following a Service Oriented Architecture
+- Built and deployed REST services using Java + Spring
 - Built front end applications in TypeScript with the Angular
   framework, the Angular Material component library, and UP’s
   custom UI component library
@@ -72,7 +60,7 @@ skills:
 
 ## Techtonic
 
-### Software Developemnt Apprentice
+### Apprentice Software Developer
 
 #### October 2020 - April 2021
 
