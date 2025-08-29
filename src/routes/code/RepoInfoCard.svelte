@@ -34,7 +34,7 @@
 
 <Card href={url} class="repo-card flex h-min w-[360px] max-w-[360px] flex-col">
   <div class="flex flex-row items-center justify-between">
-    <Heading tag={compact ? 'h6' : 'h4'}>{name}</Heading>
+    <Heading class="tracking-wider" tag={compact ? 'h6' : 'h4'}>{name}</Heading>
     <div
       class="flex flex-row items-center gap-2 text-lg font-bold"
       class:text-sm={compact}
